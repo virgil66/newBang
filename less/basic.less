@@ -1,0 +1,45 @@
+@charset "utf-8";
+@import "common";
+
+*{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+html,
+body{
+	.width-max();
+	.height(100%);
+	font-size: 62.5%;
+}
+
+body{
+	// .padding-lt(80px);
+	.font-fa(ya);
+	.pos(rel);
+}
+
+//input输入框以及button按钮
+input,
+button{
+	border: none;
+	outline: none;
+}
+
+//a标签
+a{
+	color: rgb(182,182,182);
+	.text-dec();
+}
+
+@media screen and (max-width: 668px){
+	body{
+		.padding-lt(0);
+	}
+}
+
+@media screen and (min-width: 669px){
+	body{
+		.padding-lt(80px);
+	}
+}

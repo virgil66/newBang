@@ -1,0 +1,148 @@
+@charset "utf-8";
+.nav-body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 80px;
+  height: inherit;
+  background-color: #ffffff;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+.nav-list {
+  margin-bottom: 15px;
+}
+.nav-content {
+  width: 25px;
+  margin: auto;
+  *zoom: 1;
+}
+.nav-content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.nav-icon {
+  width: 25px;
+  float: left;
+  display: inline;
+  margin-bottom: 4px;
+}
+.nav-word {
+  font-size: 12px;
+  float: left;
+  display: inline;
+  color: #b5b6b7;
+}
+.nav-bg {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+.nav-boy {
+  position: fixed;
+  z-index: 1;
+  width: 300px;
+  height: 100%;
+  background-color: #313130;
+  padding-top: 35px;
+  box-sizing: border-box;
+}
+.nav-boy-list {
+  display: none;
+}
+.nav-boy-list-link {
+  display: block;
+  text-indent: 30px;
+  padding: 15px 0;
+  box-sizing: border-box;
+}
+.nav-boy-list-link:hover {
+  background-color: #000000;
+}
+.nav-boy-list-link > img,
+.nav-boy-list-link > span {
+  vertical-align: bottom;
+}
+.nav-boy-list-link > img {
+  width: 27px;
+}
+.nav-boy-list-link > span {
+  font-size: 21px;
+  color: #ffffff;
+}
+.nav-son-list .nav-son-list-link {
+  display: block;
+  font-size: 16px;
+  text-indent: 90px;
+  padding: 7px 0;
+  box-sizing: border-box;
+}
+.nav-son-list .nav-son-list-link:hover {
+  background-color: #000000;
+  color: #3f9c95;
+}
+.nav-bg-op {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.8;
+  filter: alpha(opacity=8);
+}
+@media screen and (max-width: 668px) {
+  .block {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px 0 0 20px;
+    box-sizing: border-box;
+  }
+  .block-groups {
+    display: block;
+    width: 20px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .block-groups > li {
+    width: 20px;
+    height: 3px;
+    background-color: #dddddd;
+    border-radius: 2px;
+  }
+  .block-groups > li:nth-child(2) {
+    margin: 4px 0;
+  }
+  .block-groups:hover > li {
+    background-color: #666666;
+  }
+  .nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 669px) {
+  .block {
+    display: none;
+  }
+  .nav {
+    display: block;
+  }
+}
