@@ -103,9 +103,6 @@
   .footer-icon {
     width: 64px;
   }
-  .footer-body {
-    top: 40px;
-  }
 }
 @media screen and (min-width: 669px) and (max-width: 1024px) {
   .footer-content {

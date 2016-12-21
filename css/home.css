@@ -1,0 +1,120 @@
+@charset "utf-8";
+.bang,
+.home,
+.home-items {
+  width: 100%;
+}
+.bang {
+  position: relative;
+  z-index: 1;
+}
+.home-items {
+  position: relative;
+  overflow: hidden;
+}
+.home-item {
+  position: relative;
+  width: 300%;
+  *zoom: 1;
+}
+.home-item:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.home-item-list {
+  float: left;
+  display: inline;
+  width: 33.333%;
+}
+.home-item-link {
+  display: block;
+}
+.home-item-link > img {
+  width: 100%;
+  border: none;
+}
+@media screen and (max-width: 668px) {
+  .home-circle {
+    display: none;
+  }
+  .home-pre,
+  .home-next {
+    position: absolute;
+    top: 50%;
+    height: auto;
+    background-color: #ffffff;
+    opacity: 0.5;
+    filter: alpha(opacity=5);
+    margin-top: -62px;
+  }
+  .home-pre > img,
+  .home-next > img {
+    width: 36px;
+    cursor: pointer;
+  }
+  .home-pre {
+    left: 0;
+    padding: 42px 10px 42px 5px;
+    box-sizing: border-box;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  .home-next {
+    right: 0;
+    padding: 42px 5px 42px 10px;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+}
+@media screen and (min-width: 669px) and (max-width: 1024px) {
+  .home-circle {
+    position: absolute;
+    bottom: 26px;
+    right: 42px;
+  }
+  .home-circle .home-circle-list {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #29a7e1;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .home-circle .home-circle-list.active {
+    background-color: #29a7e1;
+  }
+  .home-pre,
+  .home-next {
+    display: none;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .home-circle {
+    position: absolute;
+    bottom: 26px;
+    right: 42px;
+  }
+  .home-circle .home-circle-list {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #29a7e1;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .home-circle .home-circle-list.active {
+    background-color: #29a7e1;
+  }
+  .home-pre,
+  .home-next {
+    display: none;
+  }
+}

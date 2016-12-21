@@ -1,17 +1,8 @@
 @charset "utf-8";
 .nav-body {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
   width: 100%;
-  height: 100%;
 }
 .nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
   width: 80px;
   height: inherit;
   background-color: #ffffff;
@@ -36,6 +27,7 @@
   float: left;
   display: inline;
   margin-bottom: 4px;
+  border: none;
 }
 .nav-word {
   font-size: 12px;
@@ -45,23 +37,10 @@
 }
 .nav-bg {
   display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
   width: 100%;
-  height: 100%;
-  padding-left: 80px;
-  box-sizing: border-box;
 }
 .nav-boy {
-  position: fixed;
-  z-index: 1;
-  width: 300px;
-  height: 100%;
   background-color: #313130;
-  padding-top: 35px;
-  box-sizing: border-box;
 }
 .nav-boy-list {
   display: none;
@@ -81,6 +60,7 @@
 }
 .nav-boy-list-link > img {
   width: 27px;
+  border: none;
 }
 .nav-boy-list-link > span {
   font-size: 21px;
@@ -98,12 +78,7 @@
   color: #3f9c95;
 }
 .nav-bg-op {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
   width: 100%;
-  height: 100%;
   background-color: #000000;
   opacity: 0.8;
   filter: alpha(opacity=8);
@@ -134,15 +109,65 @@
   .block-groups:hover > li {
     background-color: #666666;
   }
-  .nav {
+  .nav,
+  .nav-bg-op {
     display: none;
+  }
+  .nav-bg,
+  .nav-boy-list {
+    display: none;
+  }
+  .nav-bg {
+    height: auto;
+  }
+  .nav-boy {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
   }
 }
 @media screen and (min-width: 669px) {
+  .nav-body {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    height: 100%;
+  }
   .block {
     display: none;
   }
   .nav {
     display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .nav-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    height: 100%;
+    padding-left: 80px;
+    box-sizing: border-box;
+  }
+  .nav-boy {
+    position: fixed;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+    padding-top: 35px;
+    box-sizing: border-box;
+  }
+  .nav-bg-op {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    height: 100%;
   }
 }
